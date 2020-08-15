@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "liftoff-project-fitness-class-website"
+    }
+  },
+  "defaultProject": "liftoff-project-fitness-class-website",
+  "cli": {
+    "analytics": false
+  }
 }
