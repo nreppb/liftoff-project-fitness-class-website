@@ -1,0 +1,35 @@
+img {
+  
+    height: 125px;
+
+  }
+
+  a {
+      position: center;
+  }
+
+
+
+p {
+  font-weight: bold;
+ text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+h5{
+  text-align: center;
+}
+
+.intro {
+  background-color: #1c7193ad;
+}
+
+h5 {
+  color: white;
+}
+
+
+
