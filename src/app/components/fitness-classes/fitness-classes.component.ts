@@ -10,6 +10,27 @@ import { FitnessClassesService } from '../../services/fitness-classes.service'
 export class FitnessClassesComponent implements OnInit {
 
   fitnessClasses:FitnessClasses[];
+  filteredClasses: FitnessClasses[];
+  private _searchTerm: string;
+
+  get searchTerm(): string {
+    return this._searchTerm;
+  }
+
+  set searchTerm(value: string) {
+    this._searchTerm = value;
+    this.filteredClasses = this.filterClasses(value);
+  }
+
+  filterClasses(searchString: string) {
+    return this.fitnessClasses.filter(fitnessClass => 
+      fitnessClass.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 || fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+  }
+
+  filterClassesDay(searchString: string) {
+    return this.fitnessClasses.filter(fitnessClass => 
+      fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+  }
 
   constructor(private fitnessClassService:FitnessClassesService) { 
   }
@@ -19,6 +40,7 @@ export class FitnessClassesComponent implements OnInit {
     this.fitnessClassService.getFitnessClasses().subscribe(fitnessClasses => {
       this.fitnessClasses = fitnessClasses;
 
+    this.filteredClasses = this.fitnessClasses;
       
     });
 

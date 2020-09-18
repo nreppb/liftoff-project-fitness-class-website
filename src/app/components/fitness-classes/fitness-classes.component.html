@@ -1,6 +1,14 @@
 
+
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search by Name, day of week or start time..."
+     [(ngModel)] ="searchTerm">
+</div>
+
+
+
 <div class="row">
-<app-fitness-classes-item *ngFor="let fitnessClass of fitnessClasses" [fitnessClass]="fitnessClass">
+<app-fitness-classes-item *ngFor="let fitnessClass of filteredClasses" [fitnessClass]="fitnessClass">
 </app-fitness-classes-item>
 </div>
 

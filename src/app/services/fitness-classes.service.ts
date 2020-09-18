@@ -25,7 +25,8 @@ export class FitnessClassesService {
     return this.http.get<FitnessClasses[]>(this.fitnessClassesUrl);
   }
 
-  /* GET heroes whose name contains search term */
+  /* GET Fitness Classes whose name contains search term */
+  
 
 
   // // Add Fitness Classes

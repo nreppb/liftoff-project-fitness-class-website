@@ -1,7 +1,9 @@
 div {
   text-align: center;
-  width: 524px;
-  background-color: #1c7193ad;
+  width: 450px;
+  background-color: white;
+  margin-top: 70px;
+
 }
 
 input {
@@ -9,7 +11,23 @@ input {
 }
 
 
-h3 {
-  color: white;
+h4 {
+  color: #1c7193ad;
+  font-weight: bold;
+}
+
+label {
+  color: #1c7193ad;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.form-control {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 10px;
 }
   

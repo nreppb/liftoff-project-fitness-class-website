@@ -1,8 +1,9 @@
 
 div {
     text-align: center;
-    width: 524px;
-    background-color: #1c7193ad;
+    width: 290px;
+    background-color: white;
+    margin-top: 50px;
 }
 
 input {
@@ -10,8 +11,9 @@ input {
 }
 
   
-  h3 {
-    color: white;
+  h4 {
+    color: #1c7193ad;
+    font-weight: bold;
   }
   
 
