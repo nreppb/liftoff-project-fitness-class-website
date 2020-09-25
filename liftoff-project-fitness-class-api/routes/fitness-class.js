@@ -1,6 +1,6 @@
 const router = require('express').Router();
 let FitnessClass = require('../models/fitness-class.model');
-
+const ObjectID = require('mongodb').ObjectID;
 
 router.route('/').get((req, res) => {
     FitnessClass.find()

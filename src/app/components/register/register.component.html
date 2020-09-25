@@ -1,4 +1,74 @@
-<form action="/register" method="POST">
+
+<div class="row" style="margin-top:40px; padding:20px; background-color:#eff0f2;border-radius:15px;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
+  <!-- <div class="col-sm-12" style="text-align:center;">
+    Register
+  </div> -->
+
+  <div class="col-sm-12">
+    <form [formGroup]="registerForm">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+          <label for="exampleInputUsername">Username</label>
+          <input formControlName="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="userHelp" placeholder="username">
+          <small id="userHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+        <label for="passwordInput">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="passwordInput" aria-describedby="passHelp" placeholder="password">
+        <small id="passHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+          <label for="CpasswordInput">Confirm Password</label>
+          <input formControlName="cpass" type="password" class="form-control" id="CpasswordInput" aria-describedby="CpassHelp" placeholder="password">
+          <small id="CpassHelp" class="form-text text-muted"></small>
+        </div>
+      <div class="form-group" style="text-align:center;">
+          <button type="button" class="btn btn-dark" (click)="register()">Register</button>
+          <button type="button" class="btn btn-secondary" (click)="moveToLogin()">Log in</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-5 mx-auto">
+            <form (submit)="register()">
+                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter Your Name:" 
+                    [(ngModel)]="credentials.name">
+                </div>
+                <div class="form-group">
+                    <label>Description:</label>
+                    <input type="text" class="form-control" name="description" placeholder="Enter A Description about yourself:" 
+                    [(ngModel)]="credentials.description">
+                </div>
+                <div class="form-group">
+                    <label>Username:</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter Your Username:" 
+                    [(ngModel)]="credentials.username">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter a password:" 
+                    [(ngModel)]="credentials.password">
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<!-- <form action="/register" method="POST">
 <div class="form-group">
     <label for="email">Email</label>
     <input type="email" class="form-control" name="username">
@@ -8,4 +78,4 @@
     <input type="password" class="form-control" name="password">    
 </div>
 <button type="submit" class="btn btn-dark">Register</button>
-</form>
+</form> -->

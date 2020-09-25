@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { FitnessClassesComponent } from './components/fitness-classes/fitness-classes.component';
@@ -19,7 +20,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { NavBarInstructorComponent } from './components/nav-bar-instructor/nav-bar-instructor.component';
 import { InstructorManageClassesComponent } from './components/instructor-manage-classes/instructor-manage-classes.component';
 import { InstructorEditProfileComponent } from './components/instructor-edit-profile/instructor-edit-profile.component';
-import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
+import { FitnessClassDetailsComponent } from './components/fitness-class-details/fitness-class-details.component';
+import { ManageFitnessClassesComponent } from './components/manage-fitness-classes/manage-fitness-classes.component';
+import { UserAuthenticationService } from './services/user-authentication.service';
+// import { AuthGuardService } from './services/auth-guard.service';
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { UserhomeComponent } from './components/userhome/userhome.component';
 
 @NgModule({
   declarations: [
@@ -38,16 +44,20 @@ import { SearchResultsComponent } from './components/pages/search-results/search
     NavBarInstructorComponent,
     InstructorManageClassesComponent,
     InstructorEditProfileComponent,
-    SearchResultsComponent,
+    FitnessClassDetailsComponent,
+    ManageFitnessClassesComponent,
+    ProfileComponent,
+    UserhomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [UserAuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

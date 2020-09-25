@@ -1,17 +1,17 @@
   .bg-img {
     /* The image used */
-    background-image: url("https://cdn.pixabay.com/photo/2017/09/09/00/50/fitness-2730768_1280.png");
-  
+    /* background-image: url("https://cdn.pixabay.com/photo/2017/09/09/00/50/fitness-2730768_1280.png"); */
+  background-image: url("https://images.unsplash.com/photo-1549576490-b0b4831ef60a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
     /* Control the height of the image */
-    min-height: 300px;
+    min-height: 425px;
   
     /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
     position: relative;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    /* margin-top: 20px; */
+    /* margin-bottom: 5px; */
   }
   
 

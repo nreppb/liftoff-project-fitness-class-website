@@ -1,15 +1,27 @@
 <div class="container">
-    <form action="/searchResults" class="container">
+    <form action="/search" class="container">
       <h4>Search for a Fitness Class:</h4>
       <input class="form-control" type="text" placeholder="Enter Search Keywords Here..." [(ngModel)] ="searchTerm">
-        <label>All</label>
-        <input type="radio" id="all" name="searchFilter">
-        <label>Name of Fitness Class</label>
-        <input type="radio" id="name" name="searchFilter">
-        <label>Day of Week</label>
-        <input type="radio" id="day" name="searchFilter">
+        <label>Day of Week:</label>
+        <label>M</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>T</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>W</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>Th</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>F</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>S</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>Su</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+        <label>Recurring:</label>
+        <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm"> 
+        <br>
         <label>Start time</label>
-        <input type="radio" id="time" name="searchFilter">
+        <input type="time" id="time" [(ngModel)] ="searchTerm">
         <br>
         <button type="submit" class="btn">Search</button>
       

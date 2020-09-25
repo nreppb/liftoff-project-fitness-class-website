@@ -37,7 +37,6 @@ import { Component, Inject } from '@angular/core';
 // }
 
 export class AppComponent {
-  title = 'FitnessClassFinder';
 
 }
 

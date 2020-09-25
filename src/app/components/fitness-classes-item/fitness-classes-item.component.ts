@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FitnessClasses } from 'src/app/models/fitness-classes';
 import { FitnessClassesService } from '../../services/fitness-classes.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-fitness-classes-item',
@@ -9,23 +10,18 @@ import { FitnessClassesService } from '../../services/fitness-classes.service'
 })
 export class FitnessClassesItemComponent implements OnInit {
 
-
   @Input() fitnessClass: FitnessClasses;
 
-  constructor(private fitnessClassesService:FitnessClassesService) { }
+  fitnessClasses: FitnessClasses[];
+
+  constructor(private fitnessClassesService:FitnessClassesService, private _router:Router) { }
 
   ngOnInit(): void {
   }
 
-  onToggle(fitnessClass) {
-/// Toggle in UI
-    fitnessClass.complete = !fitnessClass.completed;
-    //Toggle on server
-    this.fitnessClassesService.toggleCompleted(fitnessClass).subscribe(todo => console.log(fitnessClass));
+  onClick(fitnessClassId) {
+    this._router.navigate(['/about', fitnessClassId]);
   }
 
-  onDelete(fitnessClass) {
-    console.log('delete');
-  }
 
 }

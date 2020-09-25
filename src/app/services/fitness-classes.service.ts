@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 import { FitnessClasses } from '../models/fitness-classes';
 
 let httpOptions = {
@@ -17,6 +18,8 @@ export class FitnessClassesService {
 
   fitnessClassesUrl:string = 'http://localhost:5000/fitness-class';
 
+  fitnessClasses: FitnessClasses[];
+
   constructor(private http:HttpClient) { }
 
 
@@ -25,8 +28,12 @@ export class FitnessClassesService {
     return this.http.get<FitnessClasses[]>(this.fitnessClassesUrl);
   }
 
+  getFitnessClass(_id: string): FitnessClasses {
+    return this.fitnessClasses.find(f => f._id);
+  }
+
   /* GET Fitness Classes whose name contains search term */
-  
+
 
 
   // // Add Fitness Classes

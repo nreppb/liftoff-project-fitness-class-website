@@ -1,15 +1,18 @@
 
-<br>
+    
     <table class = "table">
+        <div (click)="onClick(fitnessClass._id)" class="pointerCursor">
         <td>
-        <img alt="placeholderImage" src="https://wiki.tripwireinteractive.com/images/4/47/Placeholder.png">
-        <p>{{fitnessClass.name}} 
-        </p>
-         <p>{{fitnessClass.date}} 
-        </p>
-         <p>{{fitnessClass.time}} 
-        </p>
-    </td>   
+        <img alt="placeholderImage" [src]="fitnessClass.pictureUrl">
+            <br>
+            <div class="fitnessName">
+            {{fitnessClass.name}}</div>
+            <div>
+            {{fitnessClass.date}}
+            <br> 
+            {{fitnessClass.time}}
+        </div>
+    </td>  </div> 
     </table>
 
     <!-- <div class="block-grid-xs-2 block-grid-sm-3 block-grid-md-4">

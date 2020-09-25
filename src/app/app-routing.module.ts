@@ -8,7 +8,11 @@ import { IconsComponent } from './components/icons/icons.component';
 import { RegisterComponent } from './components/register/register.component';
 import { InstructorManageClassesComponent } from './components/instructor-manage-classes/instructor-manage-classes.component';
 import { InstructorEditProfileComponent } from './components/instructor-edit-profile/instructor-edit-profile.component';
-import { SearchResultsComponent } from './components/pages/search-results/search-results.component';
+import { FitnessClassDetailsComponent } from './components/fitness-class-details/fitness-class-details.component';
+import { ManageFitnessClassesComponent } from './components/manage-fitness-classes/manage-fitness-classes.component';
+import { ProfileComponent } from './components/pages/profile/profile.component';
+import { UserhomeComponent } from './components/userhome/userhome.component';
+// import { AuthGuardService } from './services/auth-guard.service';
 
 
 const routes: Routes = [
@@ -17,10 +21,13 @@ const routes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'login', component: LoginComponent },
     { path: 'search', component: SearchComponent },
-    { path: 'search-results', component: SearchResultsComponent},
     { path: 'register', component: RegisterComponent },
     { path: 'instructor-manage-classes', component: InstructorManageClassesComponent },
     { path: 'instructor-edit-profile', component: InstructorEditProfileComponent },
+    { path: 'about/:_id', component: FitnessClassDetailsComponent },
+    { path: 'manage', component: ManageFitnessClassesComponent },
+    { path: 'user', component: UserhomeComponent },
+    // { path: '', redirectTo:'login', pathMatch: 'full'},
 ];
 
 @NgModule({
