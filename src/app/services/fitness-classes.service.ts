@@ -29,7 +29,7 @@ export class FitnessClassesService {
   }
 
   getFitnessClass(_id: string): FitnessClasses {
-    return this.fitnessClasses.find(f => f._id);
+    return this.fitnessClasses.find(f => f._id === _id);
   }
 
   /* GET Fitness Classes whose name contains search term */
