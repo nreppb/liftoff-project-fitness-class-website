@@ -24,7 +24,7 @@ const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'instructor-manage-classes', component: InstructorManageClassesComponent },
     { path: 'instructor-edit-profile', component: InstructorEditProfileComponent },
-    { path: 'about/:_id', component: FitnessClassDetailsComponent },
+    { path: 'about/:id', component: FitnessClassDetailsComponent },
     { path: 'manage', component: ManageFitnessClassesComponent },
     { path: 'user', component: UserhomeComponent },
     // { path: '', redirectTo:'login', pathMatch: 'full'},

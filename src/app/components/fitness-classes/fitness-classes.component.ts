@@ -49,9 +49,9 @@ export class FitnessClassesComponent implements OnInit {
 
   }
 
-  // onClick(fitnessClassId: number) {
-  //   this._router.navigate(['/components', fitnessClassId]);
-  // }
+  onClick(fitnessClassId: string) {
+    this._router.navigate(['/components', fitnessClassId]);
+  }
 
   // addFitnessClasses(fitnessclasses: FitnessClasses) {
   //   this.fitnessClassService.addFitnessClasses().subscribe(fitnessclasses => {

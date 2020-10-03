@@ -1,7 +1,7 @@
 
     
     <table class = "table">
-        <div (click)="onClick(fitnessClass._id)" class="pointerCursor">
+        <div class="pointerCursor" [routerLink]="[fitnessClass._id]">
         <td>
         <img alt="placeholderImage" [src]="fitnessClass.pictureUrl">
             <br>

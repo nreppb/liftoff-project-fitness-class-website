@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-
 import { FitnessClasses } from '../models/fitness-classes';
 
 let httpOptions = {
@@ -18,18 +16,19 @@ export class FitnessClassesService {
 
   fitnessClassesUrl:string = 'http://localhost:5000/fitness-class';
 
-  fitnessClasses: FitnessClasses[];
+  
 
   constructor(private http:HttpClient) { }
 
-
+  
+fitnessClasses: FitnessClasses[];
   // Get Fitness Classes
   getFitnessClasses(): Observable<FitnessClasses[]> {
     return this.http.get<FitnessClasses[]>(this.fitnessClassesUrl);
   }
 
-  getFitnessClass(_id: string): FitnessClasses {
-    return this.fitnessClasses.find(f => f._id === _id);
+  getFitnessClass(id: string): Observable<FitnessClasses> {
+    return this.http.get<FitnessClasses>(`${this.fitnessClassesUrl}/${id}`);
   }
 
   /* GET Fitness Classes whose name contains search term */
@@ -42,10 +41,10 @@ export class FitnessClassesService {
   // }
 
   // Toggle Completed
-  toggleCompleted(fitnessClasses: FitnessClasses):Observable<any> {
-    const url = `${this.fitnessClassesUrl}/${fitnessClasses.userId}`
-    return this.http.put(url, fitnessClasses, httpOptions);
-  }
+  // toggleCompleted(fitnessClasses: FitnessClasses):Observable<any> {
+  //   const url = `${this.fitnessClassesUrl}/${fitnessClasses.userId}`
+  //   return this.http.put(url, fitnessClasses, httpOptions);
+  // }
   
 
 }
