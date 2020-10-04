@@ -26,6 +26,7 @@ import { UserAuthenticationService } from './services/user-authentication.servic
 // import { AuthGuardService } from './services/auth-guard.service';
 import { ProfileComponent } from './components/pages/profile/profile.component';
 import { UserhomeComponent } from './components/userhome/userhome.component';
+import { FitnessClassItemInstructorComponent } from './components/fitness-class-item-instructor/fitness-class-item-instructor.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { UserhomeComponent } from './components/userhome/userhome.component';
     ManageFitnessClassesComponent,
     ProfileComponent,
     UserhomeComponent,
+    FitnessClassItemInstructorComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,11 @@ import { FitnessClassesService } from '../../services/fitness-classes.service'
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-fitness-classes-item',
-  templateUrl: './fitness-classes-item.component.html',
-  styleUrls: ['./fitness-classes-item.component.css']
+  selector: 'app-fitness-class-item-instructor',
+  templateUrl: './fitness-class-item-instructor.component.html',
+  styleUrls: ['./fitness-class-item-instructor.component.css']
 })
-export class FitnessClassesItemComponent implements OnInit {
+export class FitnessClassItemInstructorComponent implements OnInit {
 
   @Input() fitnessClass: FitnessClasses;
   @Output() deleteFitnessClass: EventEmitter<FitnessClasses> = new EventEmitter();
@@ -17,6 +17,9 @@ export class FitnessClassesItemComponent implements OnInit {
 
   constructor(private fitnessClassesService:FitnessClassesService, private _router:Router) { }
 
+  onDelete(fitnessClass) {
+    this.deleteFitnessClass.emit(fitnessClass);
+  }
 
   ngOnInit(): void {
   }
@@ -24,11 +27,7 @@ export class FitnessClassesItemComponent implements OnInit {
   onClick(fitnessClassId) {
     this._router.navigate(['/about', fitnessClassId]);
   }
+
   
-  onDelete(fitnessClass) {
-    this.deleteFitnessClass.emit(fitnessClass);
-  }
-
-
 
 }

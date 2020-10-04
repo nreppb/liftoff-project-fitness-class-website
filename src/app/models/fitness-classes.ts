@@ -1,5 +1,5 @@
 export class FitnessClasses {
-    _id: string;
+    _id: any;
     name:string;
     description:string;
     userId:string;

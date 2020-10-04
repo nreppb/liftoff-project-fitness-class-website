@@ -9,6 +9,10 @@ import { FitnessClasses } from 'src/app/models/fitness-classes';
 export class AddFitnessClassComponent implements OnInit {
 @Output() addFitnessClasses: EventEmitter<any> = new EventEmitter();
   name:string;
+  description:string;
+  date:string;
+  time:string;
+  webinar:string;
 
   constructor() { }
 
@@ -18,10 +22,12 @@ export class AddFitnessClassComponent implements OnInit {
   onSubmit() {
     const fitnessClasses = {
       name: this.name,
-      // description: this.description,
-      // date: this.date,
-      // time: this.time,
-      // webinar: this.webinar,
+      userId: "userId",
+      description: this.description,
+      date: this.date,
+      time: this.time,
+      webinar: this.webinar,
+      pictureUrl: "https://aosa.org/wp-content/uploads/2019/04/image-placeholder-350x350.png",
     }
 
     this.addFitnessClasses.emit(fitnessClasses)

@@ -1,0 +1,14 @@
+<table class = "table">
+    <div>
+    <td>
+    <img alt="placeholderImage" [src]="fitnessClass.pictureUrl">
+        <br>
+        <div class="fitnessName">
+        {{fitnessClass.name}} <button (click)="onDelete(fitnessClass)" class="del">X</button></div>
+        <div>
+        {{fitnessClass.date}}
+        <br> 
+        {{fitnessClass.time}}
+        </div>
+</td>  </div> 
+</table>

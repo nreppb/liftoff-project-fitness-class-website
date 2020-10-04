@@ -24,6 +24,17 @@ export class FitnessClassesComponent implements OnInit {
     this.filteredClasses = this.filterClasses(value);
   }
 
+  private _searchTerms: string;
+
+  get searchTerms(): string {
+    return this._searchTerms;
+  }
+
+  set searchTerms(value: string) {
+    this._searchTerms = value;
+    this.filteredClasses = this.filterClasses(value);
+  }
+
   filterClasses(searchString: string) {
     return this.fitnessClasses.filter(fitnessClass => 
       fitnessClass.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 || fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
@@ -31,7 +42,9 @@ export class FitnessClassesComponent implements OnInit {
 
   filterClassesDay(searchString: string) {
     return this.fitnessClasses.filter(fitnessClass => 
-      fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+      fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1 || fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+
+      // fitnessClass.date.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
   }
 
   constructor(private fitnessClassService:FitnessClassesService,
@@ -48,6 +61,7 @@ export class FitnessClassesComponent implements OnInit {
     });
 
   }
+
 
   onClick(fitnessClassId: string) {
     this._router.navigate(['/components', fitnessClassId]);

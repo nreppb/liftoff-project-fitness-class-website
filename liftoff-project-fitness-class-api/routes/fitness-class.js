@@ -88,4 +88,12 @@ router.get('/filters', (req, res, next) => {
 
 });
 
+router.route('/:id').delete((req, res) => {
+    FitnessClass.findByIdAndDelete(req.params.id)
+      .then(() => res.json('Fitness Class deleted.'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
+
+
+
 module.exports = router;

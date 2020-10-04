@@ -1,26 +1,26 @@
 
-
+<div style="margin-top:40px; background-color:#eff0f2;
+-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
 <div class="form-group">
     <input type="text" class="form-control" placeholder="Search by Fitness Class Name..."
      [(ngModel)] ="searchTerm">
      <label></label>
      <label>M</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Monday" name="recurring" value="Monday" [(ngModel)] ="searchTerms">
      <label>T</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Tuesday" name="recurring" value="Tuesday" [(ngModel)] ="searchTerms">
      <label>W</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Wednesday" name="recurring" value="Wednesday" [(ngModel)] ="searchTerms">
      <label>Th</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Thursday" name="recurring" value="Thursday" [(ngModel)] ="searchTerms">
      <label>F</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Friday" name="recurring" value="Friday" [(ngModel)] ="searchTerms">
      <label>S</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
+     <input type="radio" id="Saturday" name="recurring" value="Saturday" [(ngModel)] ="searchTerms">
      <label>Su</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm">
-     <br>
-     <label>Recurring every week:</label>
-     <input type="checkbox" id="Recurring" [(ngModel)] ="searchTerm"> 
+     <input type="radio" id="Sunday" name="recurring" value="Sunday" [(ngModel)] ="searchTerms">
      <br>
      <!-- <label>Start time:</label>
      <input type="time" id="time" [(ngModel)] ="searchTerm"> -->
@@ -32,5 +32,5 @@
 <app-fitness-classes-item *ngFor="let fitnessClass of filteredClasses" [fitnessClass]="fitnessClass">
 </app-fitness-classes-item>
 </div>
-
+</div>
 

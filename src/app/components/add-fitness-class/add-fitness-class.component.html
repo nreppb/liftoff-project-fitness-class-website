@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
 
 <p></p>
 
@@ -48,4 +48,13 @@
 
 <p></p>
 
-</div>
+</div> -->
+<div class="container">
+<form class="form" (ngSubmit)="onSubmit()">
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Add Fitness Class Name...">
+    <input type="text" name="name" [(ngModel)]="description" placeholder="Add Description...">
+    <input type="text" name="name" [(ngModel)]="date" placeholder="Add Day...">
+    <input type="text" name="name" [(ngModel)]="time" placeholder="Add Time...">
+    <input type="text" name="name" [(ngModel)]="webinar" placeholder="Add Url...">
+    <input type="submit" value="Submit" class="btn">
+  </form></div>

@@ -2,7 +2,7 @@ import { ConvertActionBindingResult } from '@angular/compiler/src/compiler_util/
 import { Component, OnInit } from '@angular/core';
 import { FitnessClasses } from 'src/app/models/fitness-classes';
 import { FitnessClassesService } from '../../../services/fitness-classes.service';
-import { FitnessClassesComponent } from '../../fitness-classes/fitness-classes.component';
+// import { FitnessClassesComponent } from '../../fitness-classes/fitness-classes.component';
 
 @Component({
   selector: 'app-search',

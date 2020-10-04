@@ -1,0 +1,32 @@
+input {
+    text-align: center;
+}
+  
+  input {
+    text-align: center;
+    position: center;
+  }
+  
+  
+  h4 {
+    color: #1c7193e8;
+    font-weight: bold;
+  }
+  
+  label {
+    color: #1c7193e8;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 2px;
+    position: center;
+  }
+  
+  .form-control {
+    margin-top: px;
+    margin-bottom: 18px;
+  }
+
+  .form-group {
+      position: center;
+      text-align: center;
+  }

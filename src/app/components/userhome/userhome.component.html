@@ -2,20 +2,39 @@
 -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);">
-  <div class="col-sm-12" style="text-align:center;">
-    Register
-  </div>
 
-  <div class="col-sm-12">
+  <div class="col-sm-12" style="text-align:center;">
       <div class="jumbotron">
           <h1 class="display-4">Hello, {{username}}!</h1>
-          <p class="lead">You have successfully logged in to our system.</p>
+          <p class="lead">You've successfully logged in :)</p>
           <hr class="my-4">
-          <p>Thanks to bootstrap for making wonderful UI to make development fast.</p>
+          <p>Feel free to add a new class or delete a fitness class below!</p>
+          <app-add-fitness-class (addFitnessClasses)="addFitnessClasses($event)"></app-add-fitness-class>
+          <label></label>
+          <!-- <label>M</label>
+          <input type="radio" id="Monday" name="recurring" value="Monday" [(ngModel)] ="searchTerms">
+          <label>T</label>
+          <input type="radio" id="Tuesday" name="recurring" value="Tuesday" [(ngModel)] ="searchTerms">
+          <label>W</label>
+          <input type="radio" id="Wednesday" name="recurring" value="Wednesday" [(ngModel)] ="searchTerms">
+          <label>Th</label>
+          <input type="radio" id="Thursday" name="recurring" value="Thursday" [(ngModel)] ="searchTerms">
+          <label>F</label>
+          <input type="radio" id="Friday" name="recurring" value="Friday" [(ngModel)] ="searchTerms">
+          <label>S</label>
+          <input type="radio" id="Saturday" name="recurring" value="Saturday" [(ngModel)] ="searchTerms">
+          <label>Su</label>
+          <input type="radio" id="Sunday" name="recurring" value="Sunday" [(ngModel)] ="searchTerms"> -->
+          <br>
+          <div class="container">
+          <div class="row">
+            <app-fitness-class-item-instructor *ngFor="let fitnessClass of filteredClasses" [fitnessClass]="fitnessClass" (deleteFitnessClass)="deleteFitnessClass($event)">
+            </app-fitness-class-item-instructor>
+            </div>
           <p class="lead" style="color:white;">
             <a class="btn btn-primary btn-lg" role="button" (click)="logout()">Log Out</a>
           </p>
-        </div>
+        </div></div>
   </div>
 </div>
 
