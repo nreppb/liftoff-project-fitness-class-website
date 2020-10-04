@@ -30,3 +30,20 @@ input {
       position: center;
       text-align: center;
   }
+
+  .header {
+    background: #1C7293;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Noto Sans, sans-serif;
+}
+
+.logout {
+    text-align: right;
+}

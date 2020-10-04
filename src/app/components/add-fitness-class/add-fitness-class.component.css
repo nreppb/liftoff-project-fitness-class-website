@@ -11,9 +11,7 @@
     flex: 2;
 } */
 
-.form {
-    display: flex;
-  }
+
   
   .form input[type='text'] {
     flex: 10;

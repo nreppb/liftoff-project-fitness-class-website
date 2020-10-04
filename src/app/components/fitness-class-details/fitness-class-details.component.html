@@ -1,15 +1,22 @@
-
-    <div class="pointerCursor">
-            <br>
-        <div>
+<a routerLink="/about"><button class="btn btn-success pull-right" > <--Go Back to Exploring Fitness Classes </button></a>
+    <div class="container">  
+     <div>
             <img alt="placeholderImage" [src]="fitnessClass.pictureUrl">
         </div>
         <div class="fitnessName">
-        {{fitnessClass.name}}</div>
-        <div>
-        {{fitnessClass.date}}
+            <h1>
+        {{fitnessClass.name}}</h1></div>
+        <div>        
+            {{fitnessClass.date}}
         <br> 
         {{fitnessClass.time}}
+        <br><a href="{{fitnessClass.webinar}}">
+        Click this Link to Join Class!</a>
+        <br>
+        <br>
+            <p style="word-wrap: break-word">
+        {{fitnessClass.description}}</p>
+
     </div>
-</div> 
+</div>
 
